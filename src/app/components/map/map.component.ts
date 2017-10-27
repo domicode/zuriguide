@@ -129,9 +129,11 @@ export class MapComponent implements OnInit {
     }]
   }];
 
-  constructor(public pathService: PathService) {}
+  constructor(public pathService: PathService) {
+  }
 
   ngOnInit() {
+
   }
 
 }

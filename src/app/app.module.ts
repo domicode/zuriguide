@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import { MapComponent } from './components/map/map.component';
 import { WalkingpathComponent } from './components/walkingpath/walkingpath.component';
 import { FooternavComponent } from './components/footernav/footernav.component';
+import { AgmDirectionsDirective } from './directives/agm-directions.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     MapComponent,
     WalkingpathComponent,
-    FooternavComponent
+    FooternavComponent,
+    AgmDirectionsDirective
   ],
   imports: [
     BrowserModule,

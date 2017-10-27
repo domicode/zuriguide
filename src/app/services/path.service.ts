@@ -16,4 +16,12 @@ export class PathService {
       lng: 8.536734
     })
   }
+
+  public locationsArray () {
+    var result = []
+    this.wayPoints.forEach(function(values) {
+      result.push({location: values})
+    });
+    return result;
+  }
 }

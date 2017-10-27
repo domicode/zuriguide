@@ -7,4 +7,5 @@
   [styles]="style"
   [mapTypeId]="'satellite'">
   <agm-marker *ngFor="let waypoint of pathService.wayPoints" [latitude]="waypoint.lat" [longitude]="waypoint.lng"></agm-marker>
+  <agm-directions [origin]="pathService.wayPoints[0]" [destination]="pathService.wayPoints[1]" [waypoints]="pathService.locationsArray()" *ngIf="pathService.locationsArray().length > 1"></agm-directions>
 </agm-map>
