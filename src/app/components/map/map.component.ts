@@ -1,3 +1,4 @@
+import { PathService } from './../../services/path.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -128,7 +129,7 @@ export class MapComponent implements OnInit {
     }]
   }];
 
-  constructor() {}
+  constructor(public pathService: PathService) {}
 
   ngOnInit() {
   }

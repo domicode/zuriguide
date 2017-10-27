@@ -6,5 +6,5 @@
   [zoom]="17"
   [styles]="style"
   [mapTypeId]="'satellite'">
-  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  <agm-marker *ngFor="let waypoint of pathService.wayPoints" [latitude]="waypoint.lat" [longitude]="waypoint.lng"></agm-marker>
 </agm-map>

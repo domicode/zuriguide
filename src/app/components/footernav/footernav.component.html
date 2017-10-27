@@ -1,0 +1,19 @@
+<nav class="bottom-nav" (click)="openModal()">
+  <div class="nav-wrapper">
+    <a href="#modal1" class="brand-logo center modal-trigger" >Enter new location code</a>
+  </div>
+</nav>
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal bottom-sheet container" materialize="modal" [materializeParams]="[{dismissible: false}]" [materializeActions]="modalActions">
+  <div class="modal-content container">
+    <div class="input-field s12">
+      <input type="number" id="marker">
+      <label for="marker">Marker Code</label>
+      <button class="btn btn-large waves-dark waves-effect" (click)="addMarker()">Take me there</button>
+    </div>
+  </div>
+  <div class="modal-footer container center">
+    <button class="waves-effect waves-green btn-flat" (click)="closeModal()">Close</button>
+  </div>
+</div>

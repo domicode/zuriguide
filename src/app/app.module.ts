@@ -1,3 +1,4 @@
+import { PathService } from './services/path.service';
 import { MaterializeModule } from 'angular2-materialize';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -7,12 +8,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MapComponent } from './components/map/map.component';
 import { WalkingpathComponent } from './components/walkingpath/walkingpath.component';
+import { FooternavComponent } from './components/footernav/footernav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MapComponent,
-    WalkingpathComponent
+    WalkingpathComponent,
+    FooternavComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +25,7 @@ import { WalkingpathComponent } from './components/walkingpath/walkingpath.compo
       apiKey: ''
     })
   ],
-  providers: [],
+  providers: [PathService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
