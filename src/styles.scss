@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/materialize-css/sass/components/_color.scss';
+$roboto-font-path: "../node_modules/materialize-css/dist/fonts/roboto/";
+
+// Color overwrites
+// $primary-color: #1EF79F;
+// $secondary-color: #1EF79F;
+// $secondary-color: color("indigo", "lighten-1") !default;
+
+@import "../node_modules/materialize-css/sass/materialize.scss";
+
+.bottom-nav {
+  position: absolute;
+  bottom: 0;
+}
