@@ -45,7 +45,6 @@ export class AgmLocationMarkerDirective {
 
     var image = './assets/relaxing-walk.png';
 
-
     // Marker needs to be created
     this.marker = new google.maps.Marker({
       map: this.map,

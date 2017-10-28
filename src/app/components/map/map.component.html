@@ -7,6 +7,7 @@
   [styles]="style">
 
   <!-- Exploration markers -->
+  <!-- Starting marker -->
   <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
 
   <agm-directions [origin]="pathService.wayPoints[0]" [destination]="pathService.wayPoints[pathService.wayPoints.length - 1]" [waypoints]="pathService.locationsArray()" *ngIf="pathService.wayPoints.length > 1"></agm-directions>
@@ -15,5 +16,6 @@
   <agm-marker *ngFor="let waypoint of pathService.sightSeeingPoints" [latitude]="waypoint.lat" [longitude]="waypoint.lng"></agm-marker>
 
   <!-- current location -->
-  <agm-location-marker (positionChanged)="positionChanged($event)"></agm-location-marker>
+  <!-- <agm-location-marker (positionChanged)="positionChanged($event)"></agm-location-marker> -->
+  <agm-location-marker></agm-location-marker>
 </agm-map>
