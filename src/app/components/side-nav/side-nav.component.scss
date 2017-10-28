@@ -7,3 +7,12 @@
     font-size: 2.5rem;
   }
 }
+
+
+.side-nav {
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

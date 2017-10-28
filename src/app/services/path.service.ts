@@ -61,7 +61,11 @@ export class PathService {
   ];
   public currentPointId = 0;
   public markerId = '';
-  public mapMode = true;
+  public mapMode = false;
+  public showFountain = false;
+  public showArt = false;
+  public showRubbish = false;
+  public showToilets = false;
 
   constructor(public http: Http) { }
 
@@ -175,5 +179,22 @@ export class PathService {
     return this.http.get("./assets/trashbins.json")
                     .map((res:any) => res.json());
 
+  }
+
+  public recalculateWaypoints() {
+    this.sightSeeingPoints = [];
+    // code here
+    if (this.showFountain) {
+      this.getFountains();
+    }
+    if (this.showArt) {
+      this.getArtInstallations();
+    }
+    if (this.showRubbish) {
+      this.getBins();
+    }
+    if (this.showToilets) {
+      this.getToilets();
+    }
   }
 }

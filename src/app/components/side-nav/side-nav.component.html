@@ -1,14 +1,65 @@
 <a href="" data-activates="slide-out" class="button-collapse" materialize="sideNav"
-[materializeParams]="[{menuWidth: 300,edge: 'left', closeOnClick: true, draggable: true}]"><i class="material-icons">menu</i></a>
+[materializeParams]="[{menuWidth: 300,edge: 'left', closeOnClick: false, draggable: true}]"><i class="material-icons">menu</i></a>
 <ul id="slide-out" class="side-nav">
   <li><div class="user-view"></div></li>
-  <li><a class="waves-effect" (click)="pathService.toggleMode()"><i class="material-icons">explore</i>Explore mode</a></li>
+  <li>
+    <a class="waves-effect"><i class="material-icons">explore</i>Explore mode</a>
+    <span class="switch right-align">
+      <label>
+        <input type="checkbox"
+        [(ngModel)]="!pathService.mapMode"
+        (change)="pathService.toggleMode()">
+        <span class="lever"></span>
+      </label>
+    </span>
+  </li>
+
   <li><div class="divider"></div></li>
 
-  <li><a class="waves-effect" (click)="pathService.getFountains()"><i class="material-icons">local_drink</i>Show all fountains</a></li>
-  <li><a class="waves-effect" (click)="pathService.getArtInstallations()"><i class="material-icons">brush</i>Show all art installations</a></li>
-  <li><a class="waves-effect" (click)="pathService.getToilets()"><i class="material-icons">wc</i>Show all toilets</a></li>
-  <li><a class="waves-effect" (click)="pathService.getBins()"><i class="material-icons">delete</i>Show all rubbish bins</a></li>
+  <li>
+    <a class="waves-effect"><i class="material-icons">local_drink</i>Show fountains</a>
+    <span class="switch">
+      <label>
+        <input type="checkbox"
+        [(ngModel)]="pathService.showFountain"
+        (change)="pathService.recalculateWaypoints()">
+        <span class="lever"></span>
+      </label>
+    </span>
+  </li>
+  <li>
+    <a class="waves-effect"><i class="material-icons">brush</i>Show art installations</a>
+    <span class="switch">
+      <label>
+        <input type="checkbox"
+        [(ngModel)]="pathService.showArt"
+        (change)="pathService.recalculateWaypoints()">
+        <span class="lever"></span>
+      </label>
+    </span>
+  </li>
+  <li>
+    <a class="waves-effect"><i class="material-icons">wc</i>Show toilets</a>
+    <span class="switch">
+      <label>
+        <input type="checkbox"
+        [(ngModel)]="pathService.showToilets"
+        (change)="pathService.recalculateWaypoints()">
+        <span class="lever"></span>
+      </label>
+    </span>
+  </li>
+  <li>
+    <a class="waves-effect"><i class="material-icons">delete</i>Show rubbish bins</a>
+    <span class="switch">
+      <label>
+        <input type="checkbox"
+        [(ngModel)]="pathService.showRubbish"
+        (change)="pathService.recalculateWaypoints()">
+        <span class="lever"></span>
+      </label>
+    </span>
+  </li>
 
   <li><div class="divider"></div></li>
   <li><a class="waves-effect" (click)="pathService.clearMap()"><i class="material-icons">delete_sweep</i>Clear Map</a></li>
