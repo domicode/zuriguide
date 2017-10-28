@@ -13,6 +13,7 @@ import { WalkingpathComponent } from './components/walkingpath/walkingpath.compo
 import { FooternavComponent } from './components/footernav/footernav.component';
 import { AgmDirectionsDirective } from './directives/agm-directions.directive';
 import { AgmLocationMarkerDirective } from './directives/agm-location-marker.directive';
+import { SideNavComponent } from './components/side-nav/side-nav.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AgmLocationMarkerDirective } from './directives/agm-location-marker.dir
     WalkingpathComponent,
     FooternavComponent,
     AgmDirectionsDirective,
-    AgmLocationMarkerDirective
+    AgmLocationMarkerDirective,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,

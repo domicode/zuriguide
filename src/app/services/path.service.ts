@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class PathService {
-  public wayPoints = []
+  public wayPoints = [];
   public sightSeeingPoints = [];
   public pathMarkers = [
     {
@@ -80,13 +80,19 @@ export class PathService {
     return result;
   }
 
+  public clearMap () {
+    this.wayPoints = [];
+    this.sightSeeingPoints = [];
+  }
+
   public getFountains () {
-    this.wayPoints = []
+    this.wayPoints = [];
     this.getFountainData().subscribe(data =>
       data.features.forEach(item => {
         this.sightSeeingPoints.push({
           lat: item.geometry.coordinates[1],
-          lng: item.geometry.coordinates[0]
+          lng: item.geometry.coordinates[0],
+          icon: "./assets/drop.png"
         })
       })
     );
@@ -94,6 +100,63 @@ export class PathService {
 
   public getFountainData(): Observable<any> {
     return this.http.get("./assets/brunnen.json")
+                    .map((res:any) => res.json());
+
+  }
+
+  public getArtInstallations () {
+    this.wayPoints = [];
+    this.getArtData().subscribe(data =>
+      data.features.forEach(item => {
+        this.sightSeeingPoints.push({
+          lat: item.geometry.coordinates[1],
+          lng: item.geometry.coordinates[0],
+          icon: "./assets/abstract.png"
+        })
+      })
+    );
+  }
+
+  public getArtData(): Observable<any> {
+    return this.http.get("./assets/kunst.json")
+                    .map((res:any) => res.json());
+
+  }
+
+  public getToilets () {
+    this.wayPoints = [];
+    this.getToiletData().subscribe(data =>
+      data.features.forEach(item => {
+        this.sightSeeingPoints.push({
+          lat: item.geometry.coordinates[1],
+          lng: item.geometry.coordinates[0],
+          icon: "./assets/toilet.png"
+        })
+      })
+    );
+  }
+
+  public getToiletData(): Observable<any> {
+    return this.http.get("./assets/toilets.json")
+                    .map((res:any) => res.json());
+
+  }
+
+  public getBins () {
+    this.wayPoints = [];
+    this.getBinData().subscribe(data =>
+      data.features.forEach(item => {
+        this.sightSeeingPoints.push({
+          lat: item.geometry.coordinates[1],
+          lng: item.geometry.coordinates[0],
+          icon: "./assets/garbage.png"
+        })
+      })
+    );
+  }
+
+  public getBinData(): Observable<any> {
+    return this.http.get("./assets/trashbins.json")
                     .map((res:any) => res.json());
 
   }

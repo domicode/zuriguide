@@ -13,7 +13,7 @@
   <agm-directions [origin]="pathService.wayPoints[0]" [destination]="pathService.wayPoints[pathService.wayPoints.length - 1]" [waypoints]="pathService.locationsArray()" *ngIf="pathService.wayPoints.length > 1"></agm-directions>
 
   <!-- Gruped markers -->
-  <agm-marker *ngFor="let waypoint of pathService.sightSeeingPoints" [latitude]="waypoint.lat" [longitude]="waypoint.lng"></agm-marker>
+  <agm-marker *ngFor="let waypoint of pathService.sightSeeingPoints" [latitude]="waypoint.lat" [longitude]="waypoint.lng" [iconUrl]="waypoint.icon"></agm-marker>
 
   <!-- current location -->
   <!-- <agm-location-marker (positionChanged)="positionChanged($event)"></agm-location-marker> -->
