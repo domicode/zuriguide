@@ -79,6 +79,9 @@ export class PathService {
   public addMarker () {
     this.wayPoints.push(this.pathMarkers[this.currentPointId])
     this.currentPointId += 1;
+    if (this.currentPointId == 8) {
+      this.mapMode = true;
+    }
   }
 
   public locationsArray () {
