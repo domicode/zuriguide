@@ -6,38 +6,47 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class PathService {
-  public wayPoints = [{
-    lat: 47.3686498,
-    lng: 8.5391825
-  }]
+  public wayPoints = []
+  public sightSeeingPoints = [];
+  public pathMarkers = [
+    {
+      lat: 47.3686498,
+      lng: 8.5391825
+    },{
+      lat: 47.3697169,
+      lng: 8.536734
+    },{
+      lat: 47.36781,
+      lng: 8.5333858
+    },
+  ];
+  public currentPointId = 0;
 
   constructor(public http: Http) { }
 
   public addMarker () {
-    this.wayPoints.push({
-      lat: 47.3697169,
-      lng: 8.536734
-    })
+    this.wayPoints.push(this.pathMarkers[this.currentPointId])
+    this.currentPointId += 1;
   }
 
   public locationsArray () {
     var result = []
-    // this.wayPoints.forEach(function(values) {
-    //   result.push({location: values})
-    // });
+    this.wayPoints.forEach(function(values) {
+      result.push({location: values})
+    });
     return result;
   }
 
   public getFountains () {
+    this.wayPoints = []
     this.getFountainData().subscribe(data =>
       data.features.forEach(item => {
-        this.wayPoints.push({
+        this.sightSeeingPoints.push({
           lat: item.geometry.coordinates[1],
           lng: item.geometry.coordinates[0]
         })
       })
     );
-    console.log(this.wayPoints);
   }
 
   public getFountainData(): Observable<any> {

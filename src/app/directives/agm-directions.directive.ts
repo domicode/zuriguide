@@ -12,16 +12,21 @@ export class AgmDirectionsDirective {
   @Input() waypoints;
   constructor (private gmapsApi: GoogleMapsAPIWrapper) {}
   ngOnInit(){
+    this.drawRoute();
+  }
+
+  drawRoute () {
     this.gmapsApi.getNativeMap().then(map => {
       var directionsService = new google.maps.DirectionsService;
       var directionsDisplay = new google.maps.DirectionsRenderer;
       directionsDisplay.setMap(map);
+      console.log(this.destination);
       directionsService.route({
               origin: {lat: this.origin.lat, lng: this.origin.lng},
               destination: {lat: this.destination.lat, lng: this.destination.lng},
               waypoints: this.waypoints,
               optimizeWaypoints: true,
-              travelMode: 'DRIVING'
+              travelMode: 'WALKING'
             }, function(response, status) {
                         if (status === 'OK') {
                           console.log('ok')
