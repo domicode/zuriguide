@@ -1,3 +1,4 @@
+import { HttpModule } from '@angular/http';
 import { PathService } from './services/path.service';
 import { MaterializeModule } from 'angular2-materialize';
 import { BrowserModule } from '@angular/platform-browser';
@@ -25,7 +26,8 @@ import { AgmDirectionsDirective } from './directives/agm-directions.directive';
     MaterializeModule,
     AgmCoreModule.forRoot({
       apiKey: ''
-    })
+    }),
+    HttpModule
   ],
   providers: [PathService],
   bootstrap: [AppComponent]
