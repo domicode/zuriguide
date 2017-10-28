@@ -2,12 +2,15 @@
 [materializeParams]="[{menuWidth: 300,edge: 'left', closeOnClick: true, draggable: true}]"><i class="material-icons">menu</i></a>
 <ul id="slide-out" class="side-nav">
   <li><div class="user-view"></div></li>
+  <li><a class="waves-effect" (click)="pathService.toggleMode()"><i class="material-icons">explore</i>Explore mode</a></li>
+  <li><div class="divider"></div></li>
+
   <li><a class="waves-effect" (click)="pathService.getFountains()"><i class="material-icons">local_drink</i>Show all fountains</a></li>
   <li><a class="waves-effect" (click)="pathService.getArtInstallations()"><i class="material-icons">brush</i>Show all art installations</a></li>
   <li><a class="waves-effect" (click)="pathService.getToilets()"><i class="material-icons">wc</i>Show all toilets</a></li>
   <li><a class="waves-effect" (click)="pathService.getBins()"><i class="material-icons">delete</i>Show all rubbish bins</a></li>
 
   <li><div class="divider"></div></li>
-  <li><a class="waves-effect" (click)="pathService.clearMap()"><i class="material-icons"></i>Clear Map</a></li>
+  <li><a class="waves-effect" (click)="pathService.clearMap()"><i class="material-icons">delete_sweep</i>Clear Map</a></li>
   <!-- <li><a class="subheader">Subheader</a></li> -->
 </ul>

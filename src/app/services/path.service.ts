@@ -61,8 +61,14 @@ export class PathService {
   ];
   public currentPointId = 0;
   public markerId = '';
+  public mapMode = true;
 
   constructor(public http: Http) { }
+
+  public toggleMode () {
+    this.pathMarkers =[];
+    this.mapMode = !this.mapMode;
+  }
 
   public addMarker () {
     this.wayPoints.push(this.pathMarkers[this.currentPointId])
