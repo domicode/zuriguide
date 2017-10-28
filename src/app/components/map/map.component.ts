@@ -1,5 +1,6 @@
+import { AgmDirectionsDirective } from './../../directives/agm-directions.directive';
 import { PathService } from './../../services/path.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-map',
@@ -129,6 +130,8 @@ export class MapComponent implements OnInit {
     }]
   }];
 
+  @ViewChild(AgmDirectionsDirective) vc:AgmDirectionsDirective;
+
   constructor(public pathService: PathService) {
   }
 
@@ -136,4 +139,7 @@ export class MapComponent implements OnInit {
 
   }
 
+  updateRoute () {
+    this.vc.drawRoute();
+  }
 }

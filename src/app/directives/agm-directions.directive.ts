@@ -29,7 +29,6 @@ export class AgmDirectionsDirective {
               travelMode: 'WALKING'
             }, function(response, status) {
                         if (status === 'OK') {
-                          console.log('ok')
                           directionsDisplay.setDirections(response);
                         } else {
                           window.alert('Directions request failed due to ' + status);
