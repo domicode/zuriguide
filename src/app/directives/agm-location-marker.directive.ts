@@ -53,6 +53,7 @@ export class AgmLocationMarkerDirective {
       size: '10'
     })
 
-    this.map.setCenter(this.marker.getPosition())
+    // Centers map to user
+    // this.map.setCenter(this.marker.getPosition())
   }
 }

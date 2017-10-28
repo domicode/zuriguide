@@ -66,8 +66,14 @@ export class PathService {
   constructor(public http: Http) { }
 
   public toggleMode () {
-    this.pathMarkers =[];
+    this.sightSeeingPoints = [];
+    this.wayPoints = [];
     this.mapMode = !this.mapMode;
+
+    if (!this.mapMode) {
+      this.currentPointId = 0;
+      this.addMarker();
+    }
   }
 
   public addMarker () {
@@ -89,6 +95,7 @@ export class PathService {
   public clearMap () {
     this.wayPoints = [];
     this.sightSeeingPoints = [];
+    this.mapMode = true;
   }
 
   public getFountains () {

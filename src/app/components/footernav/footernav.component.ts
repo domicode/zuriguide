@@ -9,7 +9,8 @@ import {MaterializeAction} from 'angular2-materialize';
 })
 export class FooternavComponent implements OnInit {
 
-  constructor(public pathService: PathService) { }
+  constructor(public pathService: PathService) {
+  }
 
   ngOnInit() {
   }

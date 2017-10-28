@@ -1,4 +1,4 @@
-<nav class="bottom-nav" (click)="openModal()">
+<nav class="bottom-nav" (click)="openModal()" [hidden]="pathService.mapMode">
   <div class="nav-wrapper">
     <a class="brand-logo center modal-trigger">new location code</a>
   </div>
@@ -31,8 +31,8 @@
 <div id="modal" class="modal" materialize="modal" [materializeParams]="[{dismissible: false}]" [materializeActions]="modalActionsInfo"
 *ngIf="pathService.wayPoints.length >= 1">
   <div class="modal-content container">
-    <h4>{{ pathService.wayPoints[pathService.wayPoints.length - 1].title}}</h4>
-    <p>{{ pathService.wayPoints[pathService.wayPoints.length - 1].description}}</p>
+    <h4>{{ pathService.pathMarkers[pathService.wayPoints.length - 1].title}}</h4>
+    <p>{{ pathService.pathMarkers[pathService.wayPoints.length - 1].description}}</p>
   </div>
   <div class="modal-footer container center">
     <button class="waves-effect waves-green btn-flat" (click)="closeInfoModal()">Close</button>
