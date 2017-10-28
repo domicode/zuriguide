@@ -13,4 +13,7 @@
 
   <!-- Gruped markers -->
   <agm-marker *ngFor="let waypoint of pathService.sightSeeingPoints" [latitude]="waypoint.lat" [longitude]="waypoint.lng"></agm-marker>
+
+  <!-- current location -->
+  <agm-location-marker (positionChanged)="positionChanged($event)"></agm-location-marker>
 </agm-map>
