@@ -1,12 +1,16 @@
 <!-- this creates a google map on the page with the given lat/lng from -->
 <!-- the component as the initial center of the map: -->
-<div class="btn btn-large" (click)="updateRoute()">UPDATE MAP</div>
 <agm-map
   [latitude]="lat"
   [longitude]="lng"
   [zoom]="17"
-  [styles]="style"
-  [mapTypeId]="'satellite'">
-  <agm-marker *ngFor="let waypoint of pathService.wayPoints" [latitude]="waypoint.lat" [longitude]="waypoint.lng"></agm-marker>
-  <agm-directions [origin]="pathService.wayPoints[0]" [destination]="pathService.wayPoints[pathService.wayPoints.length - 1]" [waypoints]="pathService.locationsArray()" *ngIf="pathService.locationsArray().length > 1"></agm-directions>
+  [styles]="style">
+
+  <!-- Exploration markers -->
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+
+  <agm-directions [origin]="pathService.wayPoints[0]" [destination]="pathService.wayPoints[pathService.wayPoints.length - 1]" [waypoints]="pathService.locationsArray()" *ngIf="pathService.wayPoints.length > 1"></agm-directions>
+
+  <!-- Gruped markers -->
+  <agm-marker *ngFor="let waypoint of pathService.sightSeeingPoints" [latitude]="waypoint.lat" [longitude]="waypoint.lng"></agm-marker>
 </agm-map>

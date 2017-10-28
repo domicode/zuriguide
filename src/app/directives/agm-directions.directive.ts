@@ -1,4 +1,4 @@
-import { Directive, Input } from '@angular/core';
+import { Directive, Input, SimpleChanges } from '@angular/core';
 import {GoogleMapsAPIWrapper}  from '@agm/core';
 
 declare var google: any;
@@ -20,7 +20,7 @@ export class AgmDirectionsDirective {
       var directionsService = new google.maps.DirectionsService;
       var directionsDisplay = new google.maps.DirectionsRenderer;
       directionsDisplay.setMap(map);
-      console.log(this.destination);
+      directionsDisplay.setDirections({routes: []});
       directionsService.route({
               origin: {lat: this.origin.lat, lng: this.origin.lng},
               destination: {lat: this.destination.lat, lng: this.destination.lng},
@@ -35,5 +35,13 @@ export class AgmDirectionsDirective {
                         }
       });
     });
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (JSON.stringify(changes.waypoints.previousValue) == JSON.stringify(this.waypoints)) {
+      return;
+    } else {
+      this.drawRoute();
+    }
   }
 }

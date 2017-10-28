@@ -8,8 +8,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./map.component.scss']
 })
 export class MapComponent implements OnInit {
-  lat: number = 47.3686498;
-  lng: number = 8.5391825;
+  lat: number = 47.366536;
+  lng: number = 8.524687;
   style: object = [{
     featureType: 'all',
     elementType: 'geometry'
@@ -136,7 +136,7 @@ export class MapComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    this.pathService.addMarker();
   }
 
   updateRoute () {

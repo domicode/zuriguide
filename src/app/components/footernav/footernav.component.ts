@@ -15,6 +15,7 @@ export class FooternavComponent implements OnInit {
   }
 
   modalActions = new EventEmitter<string|MaterializeAction>();
+  modalActionsInfo = new EventEmitter<string|MaterializeAction>();
   openModal() {
     this.modalActions.emit({action:"modal",params:['open']});
   }
@@ -22,8 +23,18 @@ export class FooternavComponent implements OnInit {
     this.modalActions.emit({action:"modal",params:['close']});
   }
 
+  openInfoModal () {
+    this.modalActionsInfo.emit({action:"modal", params:['open']});
+  }
+
+  closeInfoModal () {
+    this.modalActionsInfo.emit({action:"modal", params:['close']});
+  }
+
   addMarker () {
+    this.pathService.markerId = '';
     this.pathService.addMarker();
     this.closeModal();
+    this.openInfoModal();
   }
 }

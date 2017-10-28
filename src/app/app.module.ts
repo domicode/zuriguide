@@ -4,6 +4,7 @@ import { MaterializeModule } from 'angular2-materialize';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AgmCoreModule } from '@agm/core';
+import { FormsModule }   from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,7 +28,8 @@ import { AgmDirectionsDirective } from './directives/agm-directions.directive';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCKx7Fof-4nzEJN9NWesam0p4jDgf6NxBY'
     }),
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [PathService],
   bootstrap: [AppComponent]
