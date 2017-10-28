@@ -25,7 +25,7 @@ import { AgmDirectionsDirective } from './directives/agm-directions.directive';
     AppRoutingModule,
     MaterializeModule,
     AgmCoreModule.forRoot({
-      apiKey: ''
+      apiKey: 'AIzaSyCKx7Fof-4nzEJN9NWesam0p4jDgf6NxBY'
     }),
     HttpModule
   ],
