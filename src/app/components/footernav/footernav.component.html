@@ -1,11 +1,11 @@
-<nav class="bottom-nav" (click)="openModal()" [hidden]="pathService.mapMode">
+<nav class="bottom-nav" href="#modal1" (click)="openModal()" [hidden]="pathService.mapMode">
   <div class="nav-wrapper">
     <a class="brand-logo center modal-trigger">new location code</a>
   </div>
 </nav>
 
 <!-- Modal Structure -->
-<div id="modal1" class="modal bottom-sheet container" materialize="modal" [materializeParams]="[{dismissible: false}]" [materializeActions]="modalActions">
+<div id="modal1" class="modal bottom-sheet container" materialize="modal" [materializeParams]="[{dismissible: true}]" [materializeActions]="modalActions">
   <div class="modal-content container">
     <div class="input-field s12">
       <form #pathForm="ngForm">
@@ -28,7 +28,7 @@
 </div>
 
 <!-- Info Modal -->
-<div id="modal" class="modal" materialize="modal" [materializeParams]="[{dismissible: false}]" [materializeActions]="modalActionsInfo"
+<div id="modal2" class="modal" materialize="modal" [materializeParams]="[{dismissible: true}]" [materializeActions]="modalActionsInfo"
 *ngIf="pathService.wayPoints.length >= 1">
   <div class="modal-content container">
     <h4>{{ pathService.pathMarkers[pathService.wayPoints.length - 1].title}}</h4>

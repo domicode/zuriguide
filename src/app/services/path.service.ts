@@ -71,7 +71,9 @@ export class PathService {
 
   public toggleMode () {
     this.sightSeeingPoints = [];
-    this.wayPoints = [];
+    // Somehow this reset does not work yet
+    // we also have to reset the map!
+    // this.wayPoints = [];
     this.mapMode = !this.mapMode;
 
     if (!this.mapMode) {
@@ -81,6 +83,7 @@ export class PathService {
   }
 
   public addMarker () {
+    this.clearMap();
     this.wayPoints.push(this.pathMarkers[this.currentPointId])
     this.currentPointId += 1;
     if (this.currentPointId == 8) {
@@ -95,18 +98,18 @@ export class PathService {
     });
     result.shift();
     result.pop();
-    console.log(result);
     return result;
   }
 
   public clearMap () {
-    this.wayPoints = [];
     this.sightSeeingPoints = [];
-    this.mapMode = true;
+    this.showArt = false;
+    this.showFountain = false;
+    this.showRubbish = false;
+    this.showToilets = false;
   }
 
   public getFountains () {
-    this.wayPoints = [];
     this.getFountainData().subscribe(data =>
       data.features.forEach(item => {
         this.sightSeeingPoints.push({
@@ -125,7 +128,6 @@ export class PathService {
   }
 
   public getArtInstallations () {
-    this.wayPoints = [];
     this.getArtData().subscribe(data =>
       data.features.forEach(item => {
         this.sightSeeingPoints.push({
@@ -144,7 +146,6 @@ export class PathService {
   }
 
   public getToilets () {
-    this.wayPoints = [];
     this.getToiletData().subscribe(data =>
       data.features.forEach(item => {
         this.sightSeeingPoints.push({
@@ -163,7 +164,6 @@ export class PathService {
   }
 
   public getBins () {
-    this.wayPoints = [];
     this.getBinData().subscribe(data =>
       data.features.forEach(item => {
         this.sightSeeingPoints.push({
