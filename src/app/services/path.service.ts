@@ -10,53 +10,83 @@ export class PathService {
   public sightSeeingPoints = [];
   public pathMarkers = [
     {
-      lat: 47.366536,
-      lng: 8.524687,
-      info: 'bruecke',
-      title: 'Hertersteg und Herterbrücke',
-      description: 'Zur Erschliessung des neu entwickelten Hürlimann-Areals und zur Verbesserung der Fussgänger- und Fahrrad-Verbindung zwischen Enge und Wiedikon führen seit Juni 2005 der Hertersteg über die Sihl und die aus Lifttürmen, Treppen und Brückentrog bestehende Herterbrücke über die Bahnlinie der SZU. Die beiden Bauwerke wurden so konzipiert, dass kein einziger Baum gefällt werden musste.'
+      lat: 47.36954260437829,
+      lng: 8.541127145290375,
+      info: 'fraumunster',
+      title: 'Fraumünster-Kreuzgang',
+      description: 'Im 9. Jahrhundert als königliches Eigenkloster gegründet. Die heutige Kirche gröss- tenteils aus dem 13./14. Jahrhundert. Um 1900 Abbruch der alten Klostergebäude und Neubau des Stadthauses. Neuschöpfung des Kreuzgangs unter Verwendung romani- scher Originalteile. Malereizyklus von Paul Bodmer (1932–1941) mit Legenden um die enthaupteten Stadtheiligen Felix, Regula und Exuperantius sowie Karl den Grossen in Zürich (Schlange) und die Gründung des Fraumünsters (Hirsch). www.fraumuenster.ch'
     },{
-      lat: 47.367410,
-      lng: 8.522458,
-      info: 'puppendoktor',
-      title: 'Zelgstrasse mit Puppendoktor',
-      description: 'Nur wenige Meter vom Verkehrslärm der Manesseund der Sihlhochstrasse entfernt erstreckt sich um Wuhr- und Zelgstrasse ein ruhiges Wohnquartier mit Büros und Kleingewerbe, Kinderkrippe und Puppendoktor. Jutta und Karl Alber arbeiten in ihrer Puppenklinik seit über dreieinhalb Jahrzehnten für Private und Museen nicht nur aus der Region, sondern für Kundschaft von Stockholm bis Uruguay und restaurieren Teddys, Automaten und Puppen, die teilweise über 200 Jahre alt sind.'
+      lat: 47.37025469583767,
+      lng: 8.544241189956665,
+      info: 'grossmunster',
+      title: 'Grossmünster-Kreuzgang',
+      description: 'Auf den Gräbern der Stadtheiligen Felix und Regula gegründetes Chorherrenstift. Der heutige Bau stammt aus dem 12./13. Jahrhundert. Die Türme wiesen bis zu ei- nem Brand des Glockenturms 1763 hohe Spitzhelme auf. Die östlich angebauten Stiftsgebäude wurden 1850 abgebrochen und durch Neubauten ersetzt. Im Innen- hof bedeutender romanischer Kreuzgang (um 1170/80). www.grossmuenster.ch'
     },{
-      lat: 47.368667,
-      lng: 8.519516,
-      info: 'kollerwiese',
-      title: 'Feedbackpoint Kollerwiese',
-      description: 'Was beobachtest du? Welchen Aktivitäten kommen die Personen im Park nach?'
+      lat: 47.37418919113348,
+      lng: 8.543779850006104,
+      info: 'niederdorf',
+      title: 'Niederdorfstrasse',
+      description: 'Der Strassenzug Niederdorfstrasse/Münstergasse/Oberdorfgasse war bis ins 18. Jahr- hundert die Hauptverkehrsache durch diesen Teil der alten Stadt. Das Limmatquai ist erst im 19. Jahrhundert durch Aufschüttungen in der Limmat geschaffen worden.'
     },{
-      lat: 47.368167,
-      lng: 8.519668,
-      info: 'museum',
-      title: 'Cultural Experience',
-      description: 'Ortsmuseum Wiedikon, Steinstrasse, 8003. Geniesst ein freier Eintritt ins Ortsmuseum Wiedikon. Bitte beim Eingang das Felix&DuDa App vorweisen.'
+      lat: 47.3744151,
+      lng: 8.541178100000025,
+      info: 'urania',
+      title: 'Parkhaus Urania, Kloster Oetenbach',
+      description: 'Im Haupteingang zwischen Kasse und Lift ein Wandbild mit Texten, historischen Fotos und Plänen zur Geschichte dieses Quartiers, unter anderem zu einem Goldfund aus der Römerzeit, zum mittelalterlichen Oetenbachkloster, zur später darin eingerichte- ten ersten kantonalen Strafanstalt und zum Durchbruch der heutigen Uraniastrasse im frühen 20. Jahrhundert.'
     },{
-      lat: 47.367486,
-      lng: 8.518386,
-      info: 'buel',
-      title: 'Bühl',
-      description: 'Auf dem Bühl dem als Randmoräne des Linthgletschers entstandenen Hügel, gefiel es schon Kelten und Alemannen, wie Gräberfunde bezeugen. Bis vor gut hundert Jahren war der ganze «Rebhügel» mit Weinbergen bedeckt. In der Fasnachtszeit tanzte die Dorfjugend auf der Hügelkuppe um ein grosses Feuer, schlug glühende Scheiben ins Flachland und verbrannte eine Art Böögg. 1896 wurden die neugotische Kirche aus Backsteinen der Fabrik im Binz gebaut und wenige Jahre später die beiden Bühlschulhäuser.'
+      lat: 47.37518457554966,
+      lng: 8.533737659454346,
+      info: 'sihlraum',
+      title: 'Sihlraum und Kaserne',
+      description: 'Die heute kanalisierte und gezähmte Sihl war während Jahrhunderten eine stän- dige Bedrohung für den Siedlungsraum Zürich. Das Sihlfeld ist ein riesiges vor- geschichtliches Flussdelta, ebenso die Zürcher Innenstadt (vergleiche Bild). Die Zähmung der Sihl war von der keltisch- römischen Zeit bis in die Neuzeit ein prä- gendes Thema für den Siedlungsraum Zürich. Die Kaserne wurde 1873–1875 an der Grenze zwischen der Stadt und der Gemeinde Aussersihl errichtet.'
     },{
-      lat: 47.362974,
-      lng: 8.522477,
-      info: 'fledermaus',
-      title: 'Fledermauskästen',
-      description: 'Einer Fledermaus-Schutzexpertin fiel 1998 im Amtsblatt die Ankündigung der Sihlhochstrassen-Sanierung auf. Sie wusste, dass sich im Bauwerk Fledermausquartiere befanden und nahm deswegen mit dem Kantonalen Tiefbauamt Kontakt auf. Es stellte sich heraus, dass sich die Fledermäuse in vertikalen Spalten aufzuhalten pflegten, welche bei den Sanierungsarbeiten verschwinden mussten. Als Ersatz werden den Fledermäusen nun in 18 drei Meter langen Fichtenholzkästen Hohlräume verschiedener Dicke angeboten, Unterschlupf für kleine wie für grosse Arten. Kontrollen haben gezeigt, dass die Kästen von Fledermäusen auch angenommen werden.'
+      lat: 47.37440352732135,
+      lng: 8.53514850139618,
+      info: 'schanzengraben',
+      title: 'Schanzengraben',
+      description: 'Teil der im 17. Jahrhundert errichteten und nach 1830 abgebrochenen baro- cken Stadtbefestigung. Der Wassergraben und die zugehörigen Bastionen waren ursprünglich viel stärker gegliedert als heute. Vergleiche dazu untenstehenden Planausschnitt.'
     },{
-      lat: 47.365019,
-      lng: 8.525213,
-      info: 'herlima',
-      title: 'Ex-Bier',
-      description: '1867 zog die Hürlimann-Brauerei von Feldbach in die Enge auf den Moränenhügel an der Sihl. Dreissig Jahre später wurde neben der Brauerei die schlösschenartige Fabrikantenvilla «Sihlberg» erbaut. Nach der Fusion mit Feldschlösschen wurde die Produktion 1997 eingestellt. Seitdem erfolgte ein Umbau des Areals zum Wohn-, Arbeits- und Freizeitort mit Ladenpassage, Restaurant, Büro- und Gewerberäumen, Seniorenresidenz, Hotel und Thermalbad im ehemaligen Maschinenhaus. 2004 ist der neue Aqui-Brunnen eingeweiht worden, der lauwarmes Mineralwasser spendet, welches 1974 bei einer Tiefenbohrung 500 Meter unter dem Boden entdeckt worden war.'
+      lat: 47.3738840330239,
+      lng: 8.53885531425476,
+      info: 'rennweg',
+      title: 'Rennweg',
+      description: 'Im 13. Jahrhundert planmässig angeleg- tes Stadtquartier. Das mittelalterliche Rennwegtor wurde 1521–1525 durch das mächtige Rennwegbollwerk ersetzt. Die- ses Stadttor bildete bis zum Bau der ba- rocken Schanzen den Eckpunkt der Stadt an der Hauptstrasse gegen Westen. Beim Bau der Bahnhofstrasse in den 1860er Jahren wurde es abgebrochen.'
     },{
-      lat: 47.367519,
-      lng: 8.526682,
-      info: 'herlima',
-      title: 'Feedback point Spielplatz Sihlpromenade',
-      description: 'Was fällt dir auf bei diesem Spielplatz? Was könnte man verbessern?'
+      lat: 47.374250949107456,
+      lng: 8.54011595249176,
+      info: 'modell',
+      title: 'Aktuelles Modell der Stadt Zürich im Amtshaus IV',
+      description: 'Öffentlich zugänglich und stimmungsvoll präsentiert im Zwischengeschoss des Amtshauses IV (Eingang von der Lindenhofstrasse). Das Modell dient unter anderem den städtischen Baubehörden zur Begutach- tung von Bauprojekten. Öffnungszeiten: Mo–Fr 08–17 Uhr'
+    },{
+      lat: 47.373048472020216,
+      lng: 8.541038632392883,
+      info: 'lindenhof',
+      title: 'Lindenhof-Terrasse',
+      description: 'Kuppe eines Moränenhügels, an dessen Abhängen seit spätkeltischer Zeit die Sied- lung Turicum/Zürich entstand. Die heutige Lindenhof-Terrasse geht grösstenteils auf das spätrömische Kastell zurück. Im Mittelalter Königspalast («Pfalz»), in dem von Zeit zu Zeit der jeweilige König oder Kaiser des Deutschen Reiches mit seinem Hofstaat residierte. Im 13. Jahrhundert Abbruch der Pfalz, seither Frei äche.'
+    },{
+      lat: 47.3711012,
+      lng: 8.540695300000039,
+      info: 'peterhofstatt',
+      title: 'St. Peterhofstatt',
+      description: 'Die Kirche St. Peter ist eine der ältesten Kirchengründungen der Stadt und war als einzige keine Klosterkirche. An dieser exponierten Lage befand sich möglicherweise bereits ein keltisch-römisches Heiligtum. Der Turm reicht bis ins 13. Jahrhundert zu- rück und beherbergte bis ins frühe 20. Jahrhundert einen Feuerwächter. 1366 wurde am Turm die erste Uhr der Stadt montiert, die heutige stammt von 1539.'
+    },{
+      lat: 47.3712955,
+      lng: 8.54127410000001,
+      info: 'thermengasse',
+      title: 'Thermengasse',
+      description: 'Baureste der römischen Bäder von Zürich aus dem 1. bis 3. Jahrhundert n. Chr. Erhal- ten sind Teile des mächtigen Ofens (Praefurnium) sowie Pfeiler der Heizanlage (Hypocaust) unter den Warmräumen Caldarium und Tepidarium. Die Überreste sind am Ort mit Plänen und Rekonstruktionen erklärt.'
+    },{
+      lat: 47.3701954,
+      lng: 8.541028500000039,
+      info: 'munsterhof',
+      title: 'Münsterhof',
+      description: 'Ursprünglich durch den Friedhof des Fraumünsters und verschiedene Bauten belegt, seit dem 13. Jahrhundert städtischer Platz etwa im heutigen Umfang. In der P ästerung sind der Verlauf der ehemaligen Friedhofsmauer und der angebauten Häuser markiert.'
+    },{
+      lat: 47.36971699501239,
+      lng: 8.538922369480133,
+      info: 'paradeplatz',
+      title: 'Paradeplatz',
+      description: 'Freiraum vor der Wollishoferpforte der mittelalterlichen Stadtmauer. Unter anderem als Viehmarkt benutzt, daher sein alter Name «Säumarkt».'
     }
   ];
   public currentPointId = 0;
@@ -86,9 +116,9 @@ export class PathService {
     this.clearMap();
     this.wayPoints.push(this.pathMarkers[this.currentPointId])
     this.currentPointId += 1;
-    if (this.currentPointId == 8) {
-      this.mapMode = true;
-    }
+    // if (this.currentPointId == 8) {
+    //   this.mapMode = true;
+    // }
   }
 
   public locationsArray () {

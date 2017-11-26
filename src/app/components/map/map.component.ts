@@ -8,8 +8,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./map.component.scss']
 })
 export class MapComponent implements OnInit {
-  lat: number = 47.366536;
-  lng: number = 8.524687;
+  lat: number = 47.36954260437829;
+  lng: number = 8.541127145290375;
   style: object = [{
     featureType: 'all',
     elementType: 'geometry'
