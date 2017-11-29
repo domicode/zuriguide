@@ -32,7 +32,12 @@
 *ngIf="pathService.wayPoints.length >= 1">
   <div class="modal-content container">
     <h4>{{ pathService.pathMarkers[pathService.wayPoints.length - 1].title}}</h4>
-    <p>{{ pathService.pathMarkers[pathService.wayPoints.length - 1].description}}</p>
+    <p>
+      <img src="./assets/images/{{ pathService.pathMarkers[pathService.wayPoints.length - 1].image }}"
+        alt="" class="modal-image"
+        *ngIf="pathService.pathMarkers[pathService.wayPoints.length - 1].image">
+      {{ pathService.pathMarkers[pathService.wayPoints.length - 1].description}}
+    </p>
   </div>
   <div class="modal-footer container center">
     <button class="waves-effect waves-green btn-flat" (click)="closeInfoModal()">Close</button>

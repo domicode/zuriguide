@@ -19,6 +19,7 @@ export class PathService {
       lat: 47.37025469583767,
       lng: 8.544241189956665,
       info: 'grossmunster',
+      image: 'grossmunster.png',
       title: 'Grossmünster-Kreuzgang',
       description: 'Auf den Gräbern der Stadtheiligen Felix und Regula gegründetes Chorherrenstift. Der heutige Bau stammt aus dem 12./13. Jahrhundert. Die Türme wiesen bis zu ei- nem Brand des Glockenturms 1763 hohe Spitzhelme auf. Die östlich angebauten Stiftsgebäude wurden 1850 abgebrochen und durch Neubauten ersetzt. Im Innen- hof bedeutender romanischer Kreuzgang (um 1170/80). www.grossmuenster.ch'
     },{
@@ -37,18 +38,21 @@ export class PathService {
       lat: 47.37518457554966,
       lng: 8.533737659454346,
       info: 'sihlraum',
+      image: 'sihlraum.png',
       title: 'Sihlraum und Kaserne',
       description: 'Die heute kanalisierte und gezähmte Sihl war während Jahrhunderten eine stän- dige Bedrohung für den Siedlungsraum Zürich. Das Sihlfeld ist ein riesiges vor- geschichtliches Flussdelta, ebenso die Zürcher Innenstadt (vergleiche Bild). Die Zähmung der Sihl war von der keltisch- römischen Zeit bis in die Neuzeit ein prä- gendes Thema für den Siedlungsraum Zürich. Die Kaserne wurde 1873–1875 an der Grenze zwischen der Stadt und der Gemeinde Aussersihl errichtet.'
     },{
       lat: 47.37440352732135,
       lng: 8.53514850139618,
       info: 'schanzengraben',
+      image: 'schanzengraben.png',
       title: 'Schanzengraben',
       description: 'Teil der im 17. Jahrhundert errichteten und nach 1830 abgebrochenen baro- cken Stadtbefestigung. Der Wassergraben und die zugehörigen Bastionen waren ursprünglich viel stärker gegliedert als heute. Vergleiche dazu untenstehenden Planausschnitt.'
     },{
       lat: 47.3738840330239,
       lng: 8.53885531425476,
       info: 'rennweg',
+      image: 'rennweg.png',
       title: 'Rennweg',
       description: 'Im 13. Jahrhundert planmässig angeleg- tes Stadtquartier. Das mittelalterliche Rennwegtor wurde 1521–1525 durch das mächtige Rennwegbollwerk ersetzt. Die- ses Stadttor bildete bis zum Bau der ba- rocken Schanzen den Eckpunkt der Stadt an der Hauptstrasse gegen Westen. Beim Bau der Bahnhofstrasse in den 1860er Jahren wurde es abgebrochen.'
     },{
